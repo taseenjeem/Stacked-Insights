@@ -6,6 +6,7 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
@@ -52,6 +53,7 @@ export default function MobileMenu() {
         </SheetTrigger>
         <SheetContent>
           <div className="mt-5 w-full">
+            <SheetTitle className="hidden"></SheetTitle>
             <ul className="flex w-full flex-col items-center gap-2">
               {navItems.map((item) => (
                 <li key={item.id} className="w-full">

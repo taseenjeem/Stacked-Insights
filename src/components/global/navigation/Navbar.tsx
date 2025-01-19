@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <nav className="fixed left-0 top-0 z-50 w-full border-b border-zinc-300 bg-zinc-50 bg-opacity-50 py-2 backdrop-blur-3xl dark:border-zinc-800 dark:bg-zinc-950">
       <header className="container flex items-center justify-between">
-        <Link href={`/`} className="text-2xl font-bold">
+        <Link href={`/`} className="text-2xl font-semibold">
           Stacked Insights
         </Link>
         <div className="hidden md:block">

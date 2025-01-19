@@ -2,8 +2,7 @@ import Link from "next/link";
 import { ModeToggle } from "./ModeToggler";
 import MobileMenu from "./MobileMenu";
 import ActiveLink from "./ActiveLink";
-import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
+import SearchBlogs from "./SearchBlogs";
 
 export default function Navbar() {
   return (
@@ -16,9 +15,7 @@ export default function Navbar() {
           <ul className="flex items-center gap-2">
             <ActiveLink href="/login">Login</ActiveLink>
             <ActiveLink href="/register">Create An Account</ActiveLink>
-            <Button variant={"outline"} size={"sm"}>
-              <Search className="size-6" /> Search Blogs
-            </Button>
+            <SearchBlogs />
             <li>
               <ModeToggle />
             </li>

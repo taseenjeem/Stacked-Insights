@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Barlow } from "next/font/google";
 import "/styles/globals.scss";
 import { ThemeProvider } from "@/providers/theme-provider";
+import Navbar from "@/components/global/navigation/Navbar";
 
 const fontStyle = Barlow({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>

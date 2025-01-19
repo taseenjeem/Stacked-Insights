@@ -62,6 +62,16 @@ export default {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        keyframes: {
+          shine: {
+            "0%": { backgroundPosition: "200% 0" },
+            "25%": { backgroundPosition: "-200% 0" },
+            "100%": { backgroundPosition: "-200% 0" },
+          },
+        },
+        animation: {
+          shine: "shine 3s ease-out infinite",
+        },
       },
     },
   },

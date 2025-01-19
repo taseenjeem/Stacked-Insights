@@ -12,34 +12,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
 
-const navItems = [
-  {
-    id: "1",
-    title: "Home",
-    href: "/",
-  },
-  {
-    id: "5",
-    title: "Shop",
-    href: "/shop",
-  },
-  {
-    id: "2",
-    title: "About",
-    href: "/about",
-  },
-  {
-    id: "3",
-    title: "Services",
-    href: "/services",
-  },
-  {
-    id: "4",
-    title: "Contact",
-    href: "/contact",
-  },
-];
-
 export default function MobileMenu() {
   const path = usePathname();
 
@@ -55,21 +27,32 @@ export default function MobileMenu() {
           <div className="mt-5 w-full">
             <SheetTitle className="hidden"></SheetTitle>
             <ul className="flex w-full flex-col items-center gap-2">
-              {navItems.map((item) => (
-                <li key={item.id} className="w-full">
-                  <SheetClose asChild>
-                    <Link href={item.href}>
-                      <Button
-                        size={"sm"}
-                        variant={path === item.href ? "default" : "ghost"}
-                        className="w-full"
-                      >
-                        {item.title}
-                      </Button>
-                    </Link>
-                  </SheetClose>
-                </li>
-              ))}
+              <li className="w-full">
+                <SheetClose asChild>
+                  <Link href={``}>
+                    <Button
+                      size={"sm"}
+                      variant={path === "/login" ? "default" : "ghost"}
+                      className="w-full"
+                    >
+                      Login
+                    </Button>
+                  </Link>
+                </SheetClose>
+              </li>
+              <li className="w-full">
+                <SheetClose asChild>
+                  <Link href={``}>
+                    <Button
+                      size={"sm"}
+                      variant={path === "/register" ? "default" : "ghost"}
+                      className="w-full"
+                    >
+                      Create An Account
+                    </Button>
+                  </Link>
+                </SheetClose>
+              </li>
               <li className="w-full">
                 <ModeToggle isMobile />
               </li>

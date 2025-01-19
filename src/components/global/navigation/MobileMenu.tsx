@@ -29,7 +29,7 @@ export default function MobileMenu() {
             <ul className="flex w-full flex-col items-center gap-2">
               <li className="w-full">
                 <SheetClose asChild>
-                  <Link href={``}>
+                  <Link href={`/login`}>
                     <Button
                       size={"sm"}
                       variant={path === "/login" ? "default" : "ghost"}
@@ -42,7 +42,7 @@ export default function MobileMenu() {
               </li>
               <li className="w-full">
                 <SheetClose asChild>
-                  <Link href={``}>
+                  <Link href={`/register`}>
                     <Button
                       size={"sm"}
                       variant={path === "/register" ? "default" : "ghost"}

@@ -21,7 +21,10 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <MobileMenu />
+        <div className="flex gap-2 md:hidden">
+          <SearchBlogs />
+          <MobileMenu />
+        </div>
       </header>
     </nav>
   );

@@ -16,7 +16,7 @@ export default function MobileMenu() {
   const path = usePathname();
 
   return (
-    <div className="block md:hidden">
+    <div>
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="outline" size={"icon"}>

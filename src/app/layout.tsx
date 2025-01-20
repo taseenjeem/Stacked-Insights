@@ -3,6 +3,7 @@ import { Barlow } from "next/font/google";
 import "/styles/globals.scss";
 import { ThemeProvider } from "@/providers/theme-provider";
 import Navbar from "@/components/global/navigation/Navbar";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const fontStyle = Barlow({
   subsets: ["latin"],
@@ -20,18 +21,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${fontStyle.className} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <body className={`${fontStyle.className} antialiased`}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar />
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

@@ -4,7 +4,7 @@ import MobileMenu from "./MobileMenu";
 import ActiveLink from "./ActiveLink";
 import SearchBlogs from "./SearchBlogs";
 import { auth, currentUser } from "@clerk/nextjs/server";
-import { SignOutButton } from "@clerk/nextjs";
+import UserDropdown from "./UserDropdown";
 
 export default async function Navbar() {
   const { userId } = await auth();
@@ -19,7 +19,7 @@ export default async function Navbar() {
         <div className="hidden md:block">
           <ul className="flex items-center gap-2">
             {userId && user ? (
-              <SignOutButton />
+              <UserDropdown />
             ) : (
               <>
                 <ActiveLink href="/sign-in">Login</ActiveLink>

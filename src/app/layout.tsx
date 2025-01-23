@@ -3,8 +3,9 @@ import { Barlow } from "next/font/google";
 import "/styles/globals.scss";
 import { ThemeProvider } from "@/providers/theme-provider";
 import Navbar from "@/components/global/navigation/Navbar";
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkLoaded, ClerkLoading, ClerkProvider } from "@clerk/nextjs";
 import Footer from "@/components/global/footer/Footer";
+import { Spinner } from "@/components/ui/spinner";
 
 const fontStyle = Barlow({
   subsets: ["latin"],
@@ -31,8 +32,17 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <ClerkLoading>
+              <div className="flex min-h-screen items-center justify-center">
+                <div className="flex items-center gap-3">
+                  <Spinner className="flex">
+                    Verifying identity. This may take a moment...
+                  </Spinner>
+                </div>
+              </div>
+            </ClerkLoading>
             <Navbar />
-            {children}
+            <ClerkLoaded>{children}</ClerkLoaded>
             <Footer />
           </ThemeProvider>
         </body>

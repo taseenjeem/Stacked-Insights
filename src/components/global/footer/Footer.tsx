@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Facebook, Twitter, Instagram, Github } from "lucide-react";
+import { FiFacebook, FiInstagram, FiGithub } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
@@ -97,28 +97,28 @@ export default function Footer() {
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               aria-label="Facebook"
             >
-              <Facebook className="h-5 w-5" />
+              <FiFacebook className="h-5 w-5" />
             </Link>
             <Link
               href="#"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               aria-label="Twitter"
             >
-              <Twitter className="h-5 w-5" />
+              <FaXTwitter className="h-5 w-5" />
             </Link>
             <Link
               href="#"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               aria-label="Instagram"
             >
-              <Instagram className="h-5 w-5" />
+              <FiInstagram className="h-5 w-5" />
             </Link>
             <Link
               href="#"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               aria-label="GitHub"
             >
-              <Github className="h-5 w-5" />
+              <FiGithub className="h-5 w-5" />
             </Link>
           </div>
         </div>

@@ -4,6 +4,7 @@ import thumbnail from "/public/images/react19.png";
 import { Badge } from "./badge";
 import { Calendar1, Heart, MessageCircle } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
+import Link from "next/link";
 
 export default function ArticleCard() {
   return (
@@ -20,7 +21,12 @@ export default function ArticleCard() {
             />
           </div>
           <CardTitle>
-            React 19: Unveiling the Game-Changing Features for Developers
+            <Link
+              href={``}
+              className="duration-300 hover:text-muted-foreground"
+            >
+              React 19: Unveiling the Game-Changing Features for Developers
+            </Link>
           </CardTitle>
           <div className="flex flex-wrap gap-2">
             <Badge>Web Development</Badge>

@@ -4,6 +4,7 @@ import { useMediaQuery } from "@/hooks/use-media-query";
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -11,6 +12,7 @@ import {
 import {
   Drawer,
   DrawerContent,
+  DrawerDescription,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -34,6 +36,10 @@ export default function SearchBlogs() {
         <DialogContent>
           <DialogHeader>
             <DialogTitle>Your Quest for Knowledge Starts Here!</DialogTitle>
+            <DialogDescription>
+              Dive into a curated collection of insightful blogs. Search,
+              explore, and uncover knowledge tailored to your curiosity.
+            </DialogDescription>
           </DialogHeader>
           <div className="mt-4">
             <SearchBar />
@@ -54,6 +60,10 @@ export default function SearchBlogs() {
         <DrawerContent>
           <DrawerHeader className="text-left">
             <DrawerTitle>Your Quest for Knowledge Starts Here!</DrawerTitle>
+            <DrawerDescription>
+              Dive into a curated collection of insightful blogs. Search,
+              explore, and uncover knowledge tailored to your curiosity.
+            </DrawerDescription>
           </DrawerHeader>
           <div className="mt-4">
             <SearchBar />

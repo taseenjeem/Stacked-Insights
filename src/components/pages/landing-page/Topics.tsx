@@ -72,6 +72,11 @@ export default async function Topics() {
                   Manage Profile
                 </Button>
               </Link>
+              <Link href={"/sign-in"} className="w-full">
+                <Button variant={"outline"} className="mt-2 w-full">
+                  Share Your Next Big Idea
+                </Button>
+              </Link>
             </div>
           </CardContent>
         </Card>

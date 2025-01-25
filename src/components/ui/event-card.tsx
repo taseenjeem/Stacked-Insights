@@ -17,14 +17,11 @@ export default function EventCard() {
             fill
           />
         </div>
-        <CardTitle>
-          <Link
-            href={``}
-            className="text-lg leading-none duration-300 hover:text-muted-foreground"
-          >
+        <Link href={``} className="duration-300 hover:text-muted-foreground">
+          <CardTitle className="text-base leading-none">
             React 19: Unveiling the Game-Changing Features for Developers
-          </Link>
-        </CardTitle>
+          </CardTitle>
+        </Link>
         <div className="flex flex-wrap gap-2">
           <Badge variant={"destructive"}>Event</Badge>
           <Badge variant={"destructive"}>Registration On Going</Badge>

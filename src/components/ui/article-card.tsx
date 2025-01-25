@@ -11,7 +11,7 @@ export default function ArticleCard() {
     <article>
       <Card>
         <CardHeader className="space-y-4">
-          <div className="aspect-w-16 aspect-h-5 relative rounded-lg">
+          <div className="aspect-h-5 aspect-w-16 relative rounded-lg">
             <Image
               quality={50}
               src={thumbnail}

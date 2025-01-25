@@ -8,7 +8,7 @@ export default function EventCard() {
   return (
     <Card>
       <CardHeader className="space-y-2">
-        <div className="aspect-w-16 aspect-h-9 relative rounded-lg">
+        <div className="aspect-h-9 aspect-w-16 relative rounded-lg">
           <Image
             quality={50}
             src={thumbnail}

@@ -22,7 +22,11 @@ export default function UserDropdown() {
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" size={"sm"}>
+          <Button
+            variant="outline"
+            size={"sm"}
+            className="focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+          >
             <CircleUserRound />
           </Button>
         </DropdownMenuTrigger>

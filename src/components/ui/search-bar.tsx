@@ -7,7 +7,7 @@ export default function SearchBar() {
     <div className="flex items-center gap-2">
       <Input
         type="text"
-        className="w-full focus-visible:ring-0"
+        className="w-full focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
         placeholder="Search..."
       />
       <Button variant={"outline"}>

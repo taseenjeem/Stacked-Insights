@@ -20,14 +20,11 @@ export default function ArticleCard() {
               fill
             />
           </div>
-          <CardTitle>
-            <Link
-              href={``}
-              className="duration-300 hover:text-muted-foreground"
-            >
+          <Link href={``} className="duration-300 hover:text-muted-foreground">
+            <CardTitle>
               React 19: Unveiling the Game-Changing Features for Developers
-            </Link>
-          </CardTitle>
+            </CardTitle>
+          </Link>
           <div className="flex flex-wrap gap-2">
             <Badge>Web Development</Badge>
             <Badge>React.js</Badge>

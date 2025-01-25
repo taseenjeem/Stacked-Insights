@@ -75,7 +75,7 @@ export default function Footer() {
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full"
+                className="w-full focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
                 aria-label="Email for newsletter"
               />
               <Button type="submit">Subscribe</Button>

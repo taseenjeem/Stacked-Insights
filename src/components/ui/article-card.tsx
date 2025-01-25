@@ -37,8 +37,8 @@ export default function ArticleCard() {
           </div>
         </CardHeader>
         <CardContent>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
+          <div className="flex flex-col justify-between gap-y-5 md:flex-row md:items-center md:gap-y-0">
+            <div className="flex items-center gap-x-3">
               <Avatar>
                 <AvatarImage
                   src="https://github.com/shadcn.png"
@@ -52,7 +52,7 @@ export default function ArticleCard() {
                 <p className="text-sm text-muted-foreground">@taseenjeem</p>
               </div>
             </div>
-            <div className="flex flex-wrap items-center gap-5">
+            <div className="flex flex-wrap items-center gap-x-4 md:gap-x-5">
               <span className="flex items-center gap-1">
                 <Heart size={18} />
                 <p>127 Likes</p>

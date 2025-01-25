@@ -14,7 +14,7 @@ export default async function Topics() {
   const user = await currentUser();
 
   return (
-    <aside className="min-h-screen w-1/5 space-y-3">
+    <aside className="hidden min-h-screen w-1/5 space-y-3 md:block">
       {!user ? (
         <Card>
           <CardHeader>

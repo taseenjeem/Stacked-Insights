@@ -30,7 +30,7 @@ export default function UserDropdown() {
             <CircleUserRound />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56">
+        <DropdownMenuContent align="end" className="w-56">
           <DropdownMenuGroup className="mx-auto">
             <DropdownMenuItem asChild>
               <Link href={`/profile`}>

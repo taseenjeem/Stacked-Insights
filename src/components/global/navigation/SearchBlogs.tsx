@@ -65,7 +65,7 @@ export default function SearchBlogs() {
               explore, and uncover knowledge tailored to your curiosity.
             </DrawerDescription>
           </DrawerHeader>
-          <div className="mt-4">
+          <div className="mt-4 p-4">
             <SearchBar />
           </div>
         </DrawerContent>

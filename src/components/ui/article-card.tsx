@@ -21,7 +21,7 @@ export default function ArticleCard() {
             />
           </div>
           <Link href={``} className="duration-300 hover:text-muted-foreground">
-            <CardTitle>
+            <CardTitle className="text-xl leading-none md:text-2xl">
               React 19: Unveiling the Game-Changing Features for Developers
             </CardTitle>
           </Link>

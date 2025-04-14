@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { currentUser } from "@clerk/nextjs/server";
 import Link from "next/link";
 
@@ -86,8 +87,9 @@ export default async function Topics() {
         <CardHeader>
           <CardTitle>Topics</CardTitle>
         </CardHeader>
+        <Separator />
         <CardContent>
-          <ul className="w-full">
+          <ul className="w-full pt-2">
             <li className="w-full">
               <Link href={`/`} className="w-full">
                 <Button variant={"ghost"} className="w-full justify-start">

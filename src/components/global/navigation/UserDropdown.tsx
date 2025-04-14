@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { LogOut, User } from "lucide-react";
+import { LogOut, TableOfContents, User } from "lucide-react";
 import { useClerk, useUser } from "@clerk/nextjs";
 import Link from "next/link";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
@@ -51,6 +51,12 @@ export default function UserDropdown() {
               <Link href={`/profile`}>
                 <User />
                 <span>Manage Profile</span>
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href={`/manage-contents`}>
+                <TableOfContents />
+                <span>Manage Contents</span>
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem onClick={handleSignout}>

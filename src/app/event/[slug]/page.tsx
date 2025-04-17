@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Clock, MapPin, Users, Ticket } from "lucide-react";
+import { Calendar, Clock, MapPin, Users, Ticket, UserPen } from "lucide-react";
 import Image from "next/image";
 
 // Mock data for demonstration
@@ -9,11 +9,13 @@ const event = {
   title: "Web Development Workshop 2024",
   thumbnail:
     "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&h=600&fit=crop",
+  organizer: "Vercel Inc.",
   date: "2024-04-15",
   time: "10:00 AM - 4:00 PM",
   location: "Tech Hub Conference Center, New York",
   price: 199,
   availableSeats: 50,
+  status: "Registration on going",
   description: `
     <p class="mb-4">Join us for an intensive one-day workshop where you'll learn the latest web development technologies and best practices from industry experts.</p>
     
@@ -107,6 +109,13 @@ export default function EventDetailsPage() {
           <Card>
             <CardContent className="p-6">
               <div className="space-y-4">
+                <div className="rounded-md border p-4">
+                  <p className="text-center">{event.status}</p>
+                </div>
+                <div className="flex items-center">
+                  <UserPen className="mr-3 size-5 text-muted-foreground" />
+                  <span>{event.organizer}</span>
+                </div>
                 <div className="flex items-center">
                   <Calendar className="mr-3 size-5 text-muted-foreground" />
                   <span>{new Date(event.date).toLocaleDateString()}</span>

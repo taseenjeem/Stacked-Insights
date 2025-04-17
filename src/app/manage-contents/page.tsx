@@ -83,6 +83,7 @@ export default function ManageContentsPage() {
                   <div className="mt-2 flex items-center text-muted-foreground">
                     <Calendar className="mr-2 h-4 w-4" />
                     <span>
+                      Published at:{" "}
                       {new Date(blog.publishDate).toLocaleDateString()}
                     </span>
                   </div>

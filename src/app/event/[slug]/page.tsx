@@ -108,23 +108,23 @@ export default function EventDetailsPage() {
             <CardContent className="p-6">
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Calendar className="mr-3 h-5 w-5 text-muted-foreground" />
+                  <Calendar className="mr-3 size-5 text-muted-foreground" />
                   <span>{new Date(event.date).toLocaleDateString()}</span>
                 </div>
                 <div className="flex items-center">
-                  <Clock className="mr-3 h-5 w-5 text-muted-foreground" />
+                  <Clock className="mr-3 size-5 text-muted-foreground" />
                   <span>{event.time}</span>
                 </div>
                 <div className="flex items-center">
-                  <MapPin className="mr-3 h-5 w-5 text-muted-foreground" />
+                  <MapPin className="mr-3 size-7 text-muted-foreground" />
                   <span>{event.location}</span>
                 </div>
                 <div className="flex items-center">
-                  <Users className="mr-3 h-5 w-5 text-muted-foreground" />
+                  <Users className="mr-3 size-5 text-muted-foreground" />
                   <span>{event.availableSeats} seats available</span>
                 </div>
                 <div className="flex items-center">
-                  <Ticket className="mr-3 h-5 w-5 text-muted-foreground" />
+                  <Ticket className="mr-3 size-5 text-muted-foreground" />
                   <span>${event.price}</span>
                 </div>
                 <Button className="mt-4 w-full">Buy Ticket</Button>

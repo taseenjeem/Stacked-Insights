@@ -17,7 +17,10 @@ export default function EventCard() {
             fill
           />
         </div>
-        <Link href={``} className="duration-300 hover:text-muted-foreground">
+        <Link
+          href={`/event/sdjflsdj`}
+          className="duration-300 hover:text-muted-foreground"
+        >
           <CardTitle className="text-base leading-none">
             React 19: Unveiling the Game-Changing Features for Developers
           </CardTitle>

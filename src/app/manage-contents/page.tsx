@@ -118,7 +118,7 @@ export default function ManageContentsPage() {
                   <h3 className="line-clamp-2 text-xl font-semibold">
                     {event.title}
                   </h3>
-                  <div className="mt-2 flex flex-col gap-2 text-muted-foreground">
+                  <div className="mt-2 flex items-center justify-between gap-2 text-muted-foreground">
                     <div className="flex items-center">
                       <Calendar className="mr-2 h-4 w-4" />
                       <span>

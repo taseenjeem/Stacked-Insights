@@ -3,6 +3,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PlusCircle, Edit, Trash2, Calendar, Clock } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 // Mock data for demonstration
 const blogs = [
@@ -19,6 +20,13 @@ const blogs = [
     thumbnail:
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&h=300&fit=crop",
     publishDate: "2024-03-18",
+  },
+  {
+    id: 3,
+    title: "Getting Started with Web Development",
+    thumbnail:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
+    publishDate: "2024-03-20",
   },
 ];
 
@@ -39,21 +47,33 @@ const events = [
     eventDate: "2024-05-01",
     status: "Open for Registration",
   },
+  {
+    id: 3,
+    title: "Web Development Workshop",
+    thumbnail:
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&h=300&fit=crop",
+    eventDate: "2024-04-15",
+    status: "Upcoming",
+  },
 ];
 
 export default function ManageContentsPage() {
   return (
     <div className="container mx-auto min-h-screen space-y-8 py-8 pt-[70px]">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col items-center justify-between gap-5 lg:flex-row">
         <h1 className="text-3xl font-bold">Manage Contents</h1>
         <div className="space-x-4">
-          <Button>
-            <PlusCircle />
-            Create New Blog
+          <Button asChild>
+            <Link href={`/manage-contents/create-new-blog`}>
+              <PlusCircle />
+              Create New Blog
+            </Link>
           </Button>
-          <Button>
-            <PlusCircle />
-            Create New Event
+          <Button asChild>
+            <Link href={`/manage-contents/create-new-event`}>
+              <PlusCircle />
+              Create New Event
+            </Link>
           </Button>
         </div>
       </div>
@@ -89,9 +109,11 @@ export default function ManageContentsPage() {
                   </div>
                 </CardContent>
                 <CardFooter className="flex justify-end space-x-2">
-                  <Button variant="outline" size="sm">
-                    <Edit />
-                    Edit
+                  <Button asChild variant="outline" size="sm">
+                    <Link href={`/manage-contents/edit-blog/${blog.id}`}>
+                      <Edit />
+                      Edit
+                    </Link>
                   </Button>
                   <Button variant="destructive" size="sm">
                     <Trash2 />
@@ -133,9 +155,11 @@ export default function ManageContentsPage() {
                   </div>
                 </CardContent>
                 <CardFooter className="flex justify-end space-x-2">
-                  <Button variant="outline" size="sm">
-                    <Edit />
-                    Edit
+                  <Button asChild variant="outline" size="sm">
+                    <Link href={`/manage-contents/edit-event/${event.id}`}>
+                      <Edit />
+                      Edit
+                    </Link>
                   </Button>
                   <Button variant="destructive" size="sm">
                     <Trash2 />

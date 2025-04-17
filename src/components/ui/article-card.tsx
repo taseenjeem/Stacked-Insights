@@ -20,7 +20,10 @@ export default function ArticleCard() {
               fill
             />
           </div>
-          <Link href={``} className="duration-300 hover:text-muted-foreground">
+          <Link
+            href={`/blog/asjdalsd`}
+            className="duration-300 hover:text-muted-foreground"
+          >
             <CardTitle className="text-xl leading-none md:text-2xl">
               React 19: Unveiling the Game-Changing Features for Developers
             </CardTitle>

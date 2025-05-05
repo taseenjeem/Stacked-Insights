@@ -2,8 +2,9 @@ import BlogCommentForm from "@/components/pages/blog-page/BlogCommentForm";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Bookmark, Calendar, Heart } from "lucide-react";
+import { Bookmark, Calendar, Heart, MessageCircle } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 // Mock data for demonstration
 const blogPost = {
@@ -80,6 +81,12 @@ export default function BlogDetailsPage() {
           <Button variant={"outline"} className="w-full">
             <Heart />
             Like
+          </Button>
+          <Button asChild variant={"outline"} className="w-full">
+            <Link href={`#add-comment`}>
+              <MessageCircle />
+              Comment
+            </Link>
           </Button>
           <Button variant={"outline"} className="w-full">
             <Bookmark />

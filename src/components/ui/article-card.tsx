@@ -11,7 +11,7 @@ export default function ArticleCard() {
     <article>
       <Card>
         <CardHeader className="space-y-4">
-          <div className="aspect-h-5 aspect-w-16 relative rounded-lg">
+          <div className="relative h-48 w-full rounded-lg lg:h-96">
             <Image
               quality={50}
               src={thumbnail}
@@ -30,10 +30,6 @@ export default function ArticleCard() {
           </Link>
           <div className="flex flex-wrap gap-2">
             <Badge>Web Development</Badge>
-            <Badge>React.js</Badge>
-            <Badge>javascript</Badge>
-            <Badge>compiler</Badge>
-            <Badge>next.js</Badge>
           </div>
         </CardHeader>
         <CardContent>

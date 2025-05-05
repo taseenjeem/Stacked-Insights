@@ -117,7 +117,7 @@ export default function EventDetailsPage() {
           <Card>
             <CardContent className="p-6">
               <div className="space-y-4">
-                <div className="rounded-md border p-4">
+                <div className="rounded-md border border-green-300 bg-green-300 bg-opacity-20 p-4">
                   <p className="text-center">{event.status}</p>
                 </div>
                 <div className="flex items-center">

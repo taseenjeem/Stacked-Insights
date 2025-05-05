@@ -1,5 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Calendar } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Bookmark, Calendar, Heart } from "lucide-react";
 import Image from "next/image";
 
 // Mock data for demonstration
@@ -55,21 +56,33 @@ export default function BlogDetailsPage() {
         />
       </div>
 
-      <div className="mb-12 flex items-center justify-center">
-        <div className="flex items-center space-x-4">
-          <Avatar className="h-12 w-12">
-            <AvatarImage
-              src={blogPost.author.avatar}
-              alt={blogPost.author.name}
-            />
-            <AvatarFallback>{blogPost.author.name[0]}</AvatarFallback>
-          </Avatar>
-          <div>
-            <div className="font-semibold">{blogPost.author.name}</div>
-            <div className="text-sm text-muted-foreground">
-              {blogPost.author.role}
+      <div className="mb-12 flex flex-col items-center justify-between gap-4 md:flex-row md:gap-0">
+        <div className="flex items-center justify-center">
+          <div className="flex items-center space-x-4">
+            <Avatar className="h-12 w-12">
+              <AvatarImage
+                src={blogPost.author.avatar}
+                alt={blogPost.author.name}
+              />
+              <AvatarFallback>{blogPost.author.name[0]}</AvatarFallback>
+            </Avatar>
+            <div>
+              <div className="font-semibold">{blogPost.author.name}</div>
+              <div className="text-sm text-muted-foreground">
+                {blogPost.author.role}
+              </div>
             </div>
           </div>
+        </div>
+        <div className="flex w-full items-center gap-2 md:w-auto">
+          <Button variant={"outline"} className="w-full">
+            <Heart />
+            Like
+          </Button>
+          <Button variant={"outline"} className="w-full">
+            <Bookmark />
+            Save
+          </Button>
         </div>
       </div>
 

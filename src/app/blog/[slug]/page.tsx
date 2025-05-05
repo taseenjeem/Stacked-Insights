@@ -1,7 +1,7 @@
 import BlogCommentForm from "@/components/pages/blog-page/BlogCommentForm";
+import BlogComments from "@/components/pages/blog-page/BlogComments";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { Bookmark, Calendar, Heart, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -100,11 +100,8 @@ export default function BlogDetailsPage() {
         dangerouslySetInnerHTML={{ __html: blogPost.content }}
       />
 
-      <div className="my-12">
-        <Separator />
-      </div>
-
       <BlogCommentForm />
+      <BlogComments author={blogPost.author} />
     </article>
   );
 }

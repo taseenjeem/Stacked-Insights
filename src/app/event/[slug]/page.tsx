@@ -1,6 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Clock, MapPin, Users, Ticket, UserPen } from "lucide-react";
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Users,
+  Ticket,
+  UserPen,
+  Bookmark,
+} from "lucide-react";
 import Image from "next/image";
 
 // Mock data for demonstration
@@ -136,7 +144,15 @@ export default function EventDetailsPage() {
                   <Ticket className="mr-3 size-5 text-muted-foreground" />
                   <span>${event.price}</span>
                 </div>
-                <Button className="mt-4 w-full">Buy Ticket</Button>
+                <div className="space-y-2">
+                  <Button variant={"outline"} className="mt-4 w-full">
+                    <Bookmark />
+                    Save Event
+                  </Button>
+                  <Button className="w-full">
+                    <Ticket /> Buy Ticket
+                  </Button>
+                </div>
               </div>
             </CardContent>
           </Card>

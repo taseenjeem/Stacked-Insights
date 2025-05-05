@@ -1,5 +1,7 @@
+import BlogCommentForm from "@/components/pages/blog-page/BlogCommentForm";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import { Bookmark, Calendar, Heart } from "lucide-react";
 import Image from "next/image";
 
@@ -90,6 +92,12 @@ export default function BlogDetailsPage() {
         className="prose prose-lg dark:prose-invert max-w-none"
         dangerouslySetInnerHTML={{ __html: blogPost.content }}
       />
+
+      <div className="my-12">
+        <Separator />
+      </div>
+
+      <BlogCommentForm />
     </article>
   );
 }

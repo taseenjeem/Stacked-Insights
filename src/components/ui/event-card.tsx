@@ -18,7 +18,7 @@ export default function EventCard() {
           />
         </div>
         <Link
-          href={`/event/sdjflsdj`}
+          href={`/events/sdjflsdj`}
           className="duration-300 hover:text-muted-foreground"
         >
           <CardTitle className="text-base leading-none">

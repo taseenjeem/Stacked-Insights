@@ -44,7 +44,11 @@ export default function ArticleCard() {
               </Avatar>
 
               <div>
-                <strong>Md. Ta-Seen Fuad Jeem</strong>
+                <strong>
+                  <Link href={`/profile/details/taseenjeem`}>
+                    Md. Ta-Seen Fuad Jeem
+                  </Link>
+                </strong>
                 <p className="text-sm text-muted-foreground">@taseenjeem</p>
               </div>
             </div>

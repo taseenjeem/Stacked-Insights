@@ -27,10 +27,7 @@ export default function EventCard() {
         </Link>
         <div className="flex flex-wrap gap-2">
           <Badge variant={"destructive"}>Event</Badge>
-          <Badge
-            variant={"destructive"}
-            className="bg-green-300 bg-opacity-20 hover:bg-green-300 hover:bg-opacity-30"
-          >
+          <Badge variant={"destructive"} className="bg-green-900">
             Registration On Going
           </Badge>
         </div>

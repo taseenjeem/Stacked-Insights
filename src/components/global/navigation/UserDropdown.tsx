@@ -11,6 +11,7 @@ import { Bookmark, LogOut, TableOfContents, User } from "lucide-react";
 import { useClerk, useUser } from "@clerk/nextjs";
 import Link from "next/link";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { toast } from "sonner";
 
 export default function UserDropdown() {
   const { signOut } = useClerk();
@@ -18,6 +19,7 @@ export default function UserDropdown() {
 
   const handleSignout = () => {
     signOut({ redirectUrl: "/" });
+    toast.success("Signed out successfully");
   };
 
   return (

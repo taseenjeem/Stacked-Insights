@@ -6,6 +6,7 @@ import Navbar from "@/components/global/navigation/Navbar";
 import { ClerkLoaded, ClerkLoading, ClerkProvider } from "@clerk/nextjs";
 import Footer from "@/components/global/footer/Footer";
 import { Spinner } from "@/components/ui/spinner";
+import { Toaster } from "@/components/ui/sonner";
 
 const fontStyle = Barlow({
   subsets: ["latin"],
@@ -42,7 +43,10 @@ export default function RootLayout({
               </div>
             </ClerkLoading>
             <Navbar />
-            <ClerkLoaded>{children}</ClerkLoaded>
+            <ClerkLoaded>
+              {children}
+              <Toaster richColors closeButton position="top-center" />
+            </ClerkLoaded>
             <Footer />
           </ThemeProvider>
         </body>

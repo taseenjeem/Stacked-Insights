@@ -1,5 +1,5 @@
 "use client";
-import { LogOut, Menu, User } from "lucide-react";
+import { Bookmark, LogOut, Menu, TableOfContents, User } from "lucide-react";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggler";
 import {
@@ -12,13 +12,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
 import { useClerk, useUser } from "@clerk/nextjs";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 export default function MobileMenu() {
@@ -42,9 +35,56 @@ export default function MobileMenu() {
           <div className="mt-5 w-full">
             <SheetTitle className="hidden"></SheetTitle>
             {user ? (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <div className="flex items-center gap-2 rounded-lg border p-2">
+              <>
+                <ul className="flex w-full flex-col items-center gap-2">
+                  <li className="w-full">
+                    <SheetClose asChild>
+                      <Button
+                        asChild
+                        size={"sm"}
+                        variant={path === "/login" ? "default" : "ghost"}
+                        className="w-full"
+                      >
+                        <Link href={`/profile`}>
+                          <User />
+                          <span>Manage Profile</span>
+                        </Link>
+                      </Button>
+                    </SheetClose>
+                  </li>
+                  <li className="w-full">
+                    <SheetClose asChild>
+                      <Button
+                        asChild
+                        size={"sm"}
+                        variant={path === "/login" ? "default" : "ghost"}
+                        className="w-full"
+                      >
+                        <Link href={`/manage-contents`}>
+                          <TableOfContents />
+                          <span>Manage Contents</span>
+                        </Link>
+                      </Button>
+                    </SheetClose>
+                  </li>
+                  <li className="w-full">
+                    <SheetClose asChild>
+                      <Button
+                        asChild
+                        size={"sm"}
+                        variant={path === "/login" ? "default" : "ghost"}
+                        className="w-full"
+                      >
+                        <Link href={`/save-contents`}>
+                          <Bookmark />
+                          <span>Saved Contents</span>
+                        </Link>
+                      </Button>
+                    </SheetClose>
+                  </li>
+                </ul>
+                <div className="my-2 rounded-lg border p-2">
+                  <div className="flex items-center gap-2">
                     <Avatar className="h-10 w-10">
                       <AvatarImage
                         src={
@@ -61,22 +101,19 @@ export default function MobileMenu() {
                       </p>
                     </div>
                   </div>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="center" className="w-full max-w-56">
-                  <DropdownMenuGroup className="mx-auto">
-                    <DropdownMenuItem asChild>
-                      <Link href={`/profile`}>
-                        <User />
-                        <span>Manage Profile</span>
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem onClick={handleSignout}>
-                      <LogOut />
-                      <span>Log out</span>
-                    </DropdownMenuItem>
-                  </DropdownMenuGroup>
-                </DropdownMenuContent>
-              </DropdownMenu>
+                  <Button
+                    onClick={handleSignout}
+                    variant={"destructive"}
+                    size={"sm"}
+                    className="mt-2 w-full"
+                  >
+                    <LogOut /> Sign Out
+                  </Button>
+                </div>
+                <div className="w-full">
+                  <ModeToggle isMobile />
+                </div>
+              </>
             ) : (
               <ul className="flex w-full flex-col items-center gap-2">
                 <li className="w-full">

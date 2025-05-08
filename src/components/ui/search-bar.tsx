@@ -9,7 +9,7 @@ export default function SearchBar() {
         required
         type="text"
         className="w-full focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
-        placeholder="Search..."
+        placeholder="Search blogs and events..."
       />
       <Button type="submit" variant={"outline"}>
         <Search className="size-6" /> Search

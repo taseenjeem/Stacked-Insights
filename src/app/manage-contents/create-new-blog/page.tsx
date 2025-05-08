@@ -45,6 +45,13 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useState } from "react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default function CreateBlogPage() {
   const [isImageDialogOpen, setIsImageDialogOpen] = useState(false);
@@ -104,36 +111,54 @@ export default function CreateBlogPage() {
           <CardTitle className="text-2xl">Create New Blog Post</CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
-          {/* Title Input */}
-          <div className="space-y-2">
-            <Label htmlFor="title">Blog Title</Label>
-            <Input
-              id="title"
-              placeholder="Enter your blog title"
-              className="text-lg focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
-            />
-          </div>
-
-          {/* Read Time Input */}
-          <div className="space-y-2">
-            <Label htmlFor="readTime">Read Time (in minutes)</Label>
-            <Input
-              id="readTime"
-              type="number"
-              placeholder="e.g., 5"
-              className="focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
-            />
-          </div>
-
-          {/* Thumbnail URL Input */}
-          <div className="space-y-2">
-            <Label htmlFor="thumbnail">Thumbnail URL</Label>
-            <Input
-              id="thumbnail"
-              type="url"
-              placeholder="Enter image URL for blog thumbnail"
-              className="focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
-            />
+          <div className="grid gap-6 md:grid-cols-2">
+            {/* Title Input */}
+            <div className="space-y-2">
+              <Label htmlFor="title">Blog Title</Label>
+              <Input
+                required
+                id="title"
+                placeholder="Enter your blog title"
+                className="text-lg focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+              />
+            </div>
+            {/* Topic Input */}
+            <div className="space-y-2">
+              <Label htmlFor="topic">Blog topic</Label>
+              <Select>
+                <SelectTrigger className="focus:outline-none focus:ring-0 focus:ring-ring focus:ring-offset-0">
+                  <SelectValue placeholder="Please select a topic" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="light">Light</SelectItem>
+                  <SelectItem value="dark">Dark</SelectItem>
+                  <SelectItem value="system">System</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            {/* Read Time Input */}
+            <div className="space-y-2">
+              <Label htmlFor="readTime">Read Time (in minutes)</Label>
+              <Input
+                required
+                min={1}
+                id="readTime"
+                type="number"
+                placeholder="e.g., 5"
+                className="focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+              />
+            </div>
+            {/* Thumbnail URL Input */}
+            <div className="space-y-2">
+              <Label htmlFor="thumbnail">Thumbnail URL</Label>
+              <Input
+                required
+                id="thumbnail"
+                type="url"
+                placeholder="Enter image URL for blog thumbnail"
+                className="focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+              />
+            </div>
           </div>
 
           {/* Rich Text Editor */}

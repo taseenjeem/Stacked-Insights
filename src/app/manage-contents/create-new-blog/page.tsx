@@ -122,7 +122,20 @@ export default function CreateBlogPage() {
                 className="text-lg focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
               />
             </div>
-            {/* Topic Input */}
+            {/* Category Input */}
+            <div className="space-y-2">
+              <Label htmlFor="topic">Blog Category</Label>
+              <Select>
+                <SelectTrigger className="focus:outline-none focus:ring-0 focus:ring-ring focus:ring-offset-0">
+                  <SelectValue placeholder="Please select a category" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="light">Light</SelectItem>
+                  <SelectItem value="dark">Dark</SelectItem>
+                  <SelectItem value="system">System</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
             <div className="space-y-2">
               <Label htmlFor="topic">Blog topic</Label>
               <Select>
